@@ -6,6 +6,9 @@ authors = ["Private_Joker"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+setuptools = "^63.2.0"
+wheel = "^0.37.1"
+pip = "^22.1.2"
 
 [tool.poetry.dev-dependencies]
 

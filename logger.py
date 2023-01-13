@@ -7,7 +7,7 @@ class Logger:
 
 	def __init__(self, parent = ''):
 
-		# parent method
+		# Name of parent programm
 		self._parent = parent
 
 		# Default time's settings
@@ -36,11 +36,11 @@ class Logger:
 	# 	self.color_mes = color_mes
 
 	# Setup filelog's setting
-	def set_file(self, name_of_log_file = "Program.log", contin_log = False):
+	def set_file(self, continue_log = False, name_of_log_file = "Programm.log"):
 		self._file_log = True
 		self._path_to_log_file = self._path_to_log_file + '/' +  name_of_log_file
 
-		if not os.path.exists(self._path_to_log_file) or not contin_log:
+		if not os.path.exists(self._path_to_log_file) or not continue_log:
 			log_f = open(self._path_to_log_file, "w")
 			log_f.write('<-----LOG FILE ' + self._parent + '----->\n')
 			log_f.close()
